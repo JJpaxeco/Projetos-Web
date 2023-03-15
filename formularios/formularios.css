@@ -62,7 +62,7 @@ fieldset .grupo .campo{
     background: #E0E0F8;
 }
 
-.botao {
+.button {
     font-size: 1.2em;
     background: #59429d;
     border: 0;
@@ -78,7 +78,28 @@ fieldset .grupo .campo{
     transform: translate(-50%, -50%);
 }
 
-.botao:hover{
+.button:hover{
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.button2 {
+    font-size: 1.2em;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.button2:hover{
     background: #CCBBFF;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
