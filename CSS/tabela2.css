@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin-left: 30%;
+    font-size: 100%;
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    color: #59429d;
+}
+
+.tabela2 {
+    text-align: center;
+    color: black;
+    background-color: aqua;
+}
