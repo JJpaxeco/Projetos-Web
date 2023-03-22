@@ -14,3 +14,9 @@ body{
     align-items: center;
     justify-content:space-around;
 }
+
+.tabela2 {
+    text-align: left;
+    color: black;
+    background-color: aqua;
+}
