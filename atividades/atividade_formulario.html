@@ -7,10 +7,11 @@
         <title>Formulários de Inscrição</title>
     </head>
     <body>
+        <fieldset style="width: 500px; margin: 0 auto;">
         <h2 style="text-align: center;">Formulário de Inscrição em Evento</h2>
         <form>
             <fieldset style="width: 500px; margin: 0 auto;">
-                <table style="margin: 0;">
+                <table>
                     <tr>
                         <td style="text-align: right;">Nome Completo:</td>
                         <td><input type="text" name="nome" placeholder="Digite seu nome aqui..." required></td>
@@ -22,8 +23,8 @@
                     <tr>
                         <td style="text-align: right;">Sexo:</td>
                         <td>
-                            <input type="radio" name="masculino" value="masculino" required>Masculino
-                            <input type="radio" name="feminino" value="feminino" required>Feminino
+                            <input type="radio" name="sexo" value="masculino" required>Masculino
+                            <input type="radio" name="sexo" value="feminino" required>Feminino
                         </td>
                     </tr>
                     <tr>
@@ -41,12 +42,72 @@
                 </table>
             </fieldset>
         </form>
-        <h2 style="text-align: center;">Informações da Instituição</h2>
-        <p style="text-align: center;">Preencha os campos abaixo com as informações da empresa em que trabalha</p>
+        <h2 style="text-align: left;">Informações da Instituição</h2>
+        <p style="text-align: left;">Preencha os campos abaixo com as informações da empresa em que trabalha</p>
         <form>
-            <fieldset>
-                <table></table>
+            <fieldset style="width: 500px; margin: 0 auto;">
+                <table>
+                    <tr>
+                        <td style="text-align: right;">Empresa:</td>
+                        <td><input type="text" name="empresa" placeholder="Nome da empresa..."></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Endereço Completo:</td>
+                        <td><input type="text" name="endereco" placeholder="Endereço da empresa..."></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Cidade:</td>
+                        <td><input type="text" name="cidade"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Estado:</td>
+                        <td>
+                            <select id="UF" name="UF">
+                                <option selected disabled>Selecione</option>
+                                <option>Acre</option>
+                                <option>Alagoas</option>
+                                <option>Amapá</option>
+                                <option>Amazonas</option>
+                                <option>Bahia</option>
+                                <option>Ceará</option>
+                                <option>Distrito Federal</option>
+                                <option>Espirito Santo</option>
+                                <option>Goiás</option>
+                                <option>Maranhão</option>
+                                <option>Mato Grosso do Sul</option>
+                                <option>Mato Grosso</option>
+                                <option>Minas Gerais</option>
+                                <option>Pará</option>
+                                <option>Paraíba</option>
+                                <option>Paraná</option>
+                                <option>Pernambuco</option>
+                                <option>Piauí</option>
+                                <option>Rio de Janeiro</option>
+                                <option>Rio Grande do Norte</option>
+                                <option>Rio Grande do Sul</option>
+                                <option>Rondônia</option>
+                                <option>Roraima</option>
+                                <option>Santa Catarina</option>
+                                <option>São Paulo</option>
+                                <option>Sergipe</option>
+                                <option>Tocantins</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Quant. Funcionários:</td>
+                        <td><input type="text" name="quant_func"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Observações:</td>
+                        <td><textarea name="texto"cols="21" rows="5"></textarea></td>
+                    </tr>
+                </table>
             </fieldset>
+            <p style="text-align: center;">Recibo:<input type="checkbox">Emitir em nome da Instituição
+            <input type="button" value="Fazer Inscrição">
+            </p>
         </form>
+    </fieldset>
     </body>
 </html>
