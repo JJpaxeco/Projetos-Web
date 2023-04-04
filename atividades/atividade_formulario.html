@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulários de Inscrição</title>
+    </head>
+    <body>
+        <h2 style="text-align: center;">Formulário de Inscrição em Evento</h2>
+        <form>
+            <fieldset style="width: 500px; margin: 0 auto;">
+                <table style="margin: 0;">
+                    <tr>
+                        <td style="text-align: right;">Nome Completo:</td>
+                        <td><input type="text" name="nome" placeholder="Digite seu nome aqui..." required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">E-mail:</td>
+                        <td><input type="email" name="email" placeholder="Digite seu e-mail aqui..." required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Sexo:</td>
+                        <td>
+                            <input type="radio" name="masculino" value="masculino" required>Masculino
+                            <input type="radio" name="feminino" value="feminino" required>Feminino
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Cargo:</td>
+                        <td><input type="text" name="cargo" placeholder="Digite seu cargo aqui..." required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Nascimento:</td>
+                        <td><input type="date" name="data" required></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">Telefone:</td>
+                        <td><input type="tel" name="telefone" placeholder="Digite seu telefone aqui..." required></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <h2 style="text-align: center;">Informações da Instituição</h2>
+        <p style="text-align: center;">Preencha os campos abaixo com as informações da empresa em que trabalha</p>
+        <form>
+            <fieldset>
+                <table></table>
+            </fieldset>
+        </form>
+    </body>
+</html>
