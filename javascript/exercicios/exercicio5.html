@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript</title>
+    </head>
+    <body>
+        <h1>5 - Elabore um programa em JavaScript para receber uma quantidade de horas e uma quantidade de minutos e converter apenas em minutos. Mostre o resultado utilizando a função "document.write".</h1>
+        <script>
+        var  n1 = parseInt(prompt('Informe o valor em MINUTOS: '));
+        document.write(n1+' minutos, equivalem a '+Math.floor(n1/1440)+' dia(s) , '+Math.floor((n1%1440)/60)+' hora(s), '+n1%60+' minuto(s).');
+        </script>
+    </body>
+</html>
