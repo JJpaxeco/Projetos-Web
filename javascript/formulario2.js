@@ -27,3 +27,5 @@ btSexo.onclick = function(){
     });
     mensagem.text = mens;
 };
+
+undefined.onchange
