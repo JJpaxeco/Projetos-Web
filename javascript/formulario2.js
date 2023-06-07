@@ -6,3 +6,8 @@ telefone.onblur = function(){
         this.style.backgroundColor = 'white';
     }
 };
+
+aperitivo = document.getElementById('aperit')
+aperitivo.onchange = function(){
+    this.checked ? alert("Ok, vou providenciar!") : alert('Até a próxima');
+};
