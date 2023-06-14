@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Médias</title>
+        <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        button {
+            margin-top: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Calculadora de Médias</h1>
+            <label>Nota da Prova 1: <input type="number" id="nota1"></label>
+            <label>Nota da Prova 2: <input type="number" id="nota2"></label>
+            <label>
+                <input type="radio" name="media" value="aritmetica" checked>Média Aritmética
+            </label>
+            <label>
+                <input type="radio" name="media" value="ponderada">Média Ponderada
+            </label>
+            <button onclick="calcularMedia()">Calcular</button>
+            <p id="resultado"></p>
+        </div>
+        <script>
+        function calcularMedia(){
+            var nota1 = parseFloat(document.getElementById('nota1').value);
+            var nota2 = parseFloat(document.getElementById('nota2').value);
+            var media;
+            var opcoesMedia = document.getElementsByName('media');
+            var tipoMedia;
+            for (var i = 0; i < opcoesMedia.length; i++) {
+                if (opcoesMedia[i].checked) {
+                    tipoMedia = opcoesMedia[i].value;
+                    break;
+                }
+            }
+            if (tipoMedia === 'aritmetica') {
+                media = (nota1 + nota2) / 2;
+            } else if (tipoMedia === 'ponderada') {
+                media = (nota1 * 2 + nota2 * 4) / 6;
+            }
+
+            var resultadoElement = document.getElementById('resultado');
+            resultadoElement.textContent = 'Média: ' + media.toFixed(2);
+
+            if (media >= 60) {
+                resultadoElement.textContent += ' - Aprovado';
+            } else if (media < 30) {
+                resultadoElement.textContent += ' - Reprovado';
+            } else {
+                resultadoElement.textContent += ' - Em recuperação';
+            }
+        }
+        </script>
+    </body>
+</html>
