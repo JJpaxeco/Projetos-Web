@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificar Divisibilidade</title>
+        <script>
+        function verificarDivisibilidade(){
+            var numero = parseInt(document.getElementById('numero').value);
+            var resultado = "";
+            if (numero % 2 === 0){
+                resultado += "É divisível por 2<br>";
+            }else{
+                resultado += "Não é divisível por 2<br>";
+            }
+            if (numero % 3 === 0){
+                resultado += "É divisível por 3";
+            }else{
+                resultado += "Não é divisível por 3";
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Verificar Divisibilidade</h1>
+        <label>Digite um número: <input type="number" id="numero"></label>
+        <button onclick="verificarDivisibilidade()">Verificar</button>
+        <div id="resultado"></div>
+    </body>
+</html>
