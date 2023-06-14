@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imprimir Números Pares</title>
+        <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Imprimir Números Pares</h1>
+            <label>Primeiro número: <input type="number" id="numero1"></label>
+            <label>Segundo número: <input type="number" id="numero2"></label>
+            <button onclick="imprimirNumerosPares()">Imprimir</button>
+            <p id="resultado"></p>
+        </div>
+        <script>
+        function imprimirNumerosPares(){
+            var numero1 = parseInt(document.getElementById('numero1').value);
+            var numero2 = parseInt(document.getElementById('numero2').value);
+            var resultado = "";
+            for (var i = numero1; i <= numero2; i++){
+                if (i % 2 === 0){
+                    resultado += i + " ";
+                }
+            }
+            document.getElementById('resultado').textContent = "Números pares: " + resultado;
+        }
+        </script>
+    </body>
+</html>

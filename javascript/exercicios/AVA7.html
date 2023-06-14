@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soma de Números</title>
+        <style>
+        .container{
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Soma de Números</h1>
+            <label>Digite um número: <input type="number" id="numero"></label>
+            <button onclick="calcularSoma()">Calcular</button>
+            <p id="resultado"></p>
+        </div>
+        <script>
+        function calcularSoma(){
+            var numero = parseInt(document.getElementById('numero').value);
+            var soma = 0;
+            while (numero >= 0){
+                soma += numero;
+                numero = parseInt(prompt("Digite um número:"));
+            }
+            document.getElementById('resultado').textContent = 'A soma dos números digitados é: ' + soma;
+        }
+        </script>
+    </body>
+</html>

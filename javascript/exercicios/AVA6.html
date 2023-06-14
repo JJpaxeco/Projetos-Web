@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabuada</title>
+        <style>
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Tabuada</h1>
+            <label>Digite um número: <input type="number" id="numero"></label>
+            <button onclick="gerarTabuada()">Gerar Tabuada</button>
+            <div id="resultado"></div>
+        </div>
+        <script>
+        function gerarTabuada(){
+            var numero = parseInt(document.getElementById('numero').value);
+            var resultado = '';
+            var i = 1;
+            while (i <= 10){
+                resultado += numero + ' + ' + i + ' = ' + (numero + i) + '<br>';
+                i++;
+            }
+            resultado += '<br>';
+            i = 1;
+            while (i <= 10){
+                resultado += numero + ' - ' + i + ' = ' + (numero - i) + '<br>';
+                i++;
+            }
+            resultado += '<br>';
+            i = 1;
+            while (i <= 10){
+                resultado += numero + ' * ' + i + ' = ' + (numero * i) + '<br>';
+                i++;
+            }
+            resultado += '<br>';
+            i = 1;
+            while (i <= 10){
+                resultado += numero + ' / ' + i + ' = ' + (numero / i) + '<br>';
+                i++;
+            }
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+        </script>
+    </body>
+</html>
