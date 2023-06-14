@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Questionário</title>
+        <style>
+        .container{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question{
+            margin-bottom: 10px;
+        }
+        .incorrect{
+            border: 1px solid red;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Questionário</h1>
+            <form id="questionnaire">
+                <div class="question">
+                    <label for="q1">Questão 1: Qual é a capital do Brasil?</label>
+                    <input type="text" id="q1" required>
+                </div>
+                <div class="question">
+                    <label for="q2">Questão 2: Quem pintou a Mona Lisa?</label>
+                    <input type="text" id="q2" required>
+                </div>
+                <div class="question">
+                    <label for="q3">Questão 3: Quanto é 2 + 2?</label>
+                    <input type="number" id="q3" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+        document.getElementById('questionnaire').addEventListener('submit', function (event){
+            event.preventDefault();
+            var q1 = document.getElementById('q1').value;
+            var q2 = document.getElementById('q2').value;
+            var q3 = parseInt(document.getElementById('q3').value);
+            var isCorrect = true;
+            if (q1.toLowerCase() !== 'brasília'){
+                document.getElementById('q1').classList.add('incorrect');
+                isCorrect = false;
+            }else{
+                document.getElementById('q1').classList.remove('incorrect');
+            }
+            if (q2.toLowerCase() !== 'leonardo da vinci'){
+                document.getElementById('q2').classList.add('incorrect');
+                isCorrect = false;
+            }else{
+                document.getElementById('q2').classList.remove('incorrect');
+            }
+            if (q3 !== 4){
+                document.getElementById('q3').classList.add('incorrect');
+                isCorrect = false;
+            }else{
+                document.getElementById('q3').classList.remove('incorrect');
+            }
+            if (isCorrect){
+                document.getElementById('questionnaire').submit();
+            }
+        });
+        </script>
+    </body>
+</html>
