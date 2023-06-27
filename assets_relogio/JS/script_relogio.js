@@ -22,9 +22,9 @@ const relogio = setInterval(function time(){
 
 const data = setInterval(function time(){
     let dateToday = new Date();
-    let di = dateToday.getUTCDay();
-    let me = dateToday.getUTCMonth();
-    let an = dateToday.getUTCFullYear();
+    let di = dateToday.getDate();
+    let me = dateToday.getMonth()+1;
+    let an = dateToday.getFullYear();
 
     if(di<10) di='0'+di;
     if(me<10) me='0'+me;
