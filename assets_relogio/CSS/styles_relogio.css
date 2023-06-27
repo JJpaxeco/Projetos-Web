@@ -25,7 +25,7 @@ body {
 }
 .relogio div {
     height: 170px;
-    width: 150px;
+    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 }
 .calendario div {
     height: 170px;
-    width: 150px;
+    width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
